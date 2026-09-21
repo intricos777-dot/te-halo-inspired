@@ -6,11 +6,19 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_subdirectory(/home/sin/Projects/games/twilight-elysium ${CMAKE_BINARY_DIR}/twilight-elysium)
 
+find_package(nlohmann_json 3.11 QUIET)
+if(NOT nlohmann_json_FOUND)
+    include(FetchContent)
+    FetchContent_Declare(json URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz)
+    FetchContent_MakeAvailable(json)
+endif()
+
 # Core game library
 add_library(tehi-core STATIC
     src/core/game.cpp
     src/core/world.cpp
     src/core/game_state.cpp
+    src/combat/combat.cpp
 )
 target_link_libraries(tehi-core PUBLIC te-engine te-renderer te-asset tehi-player tehi-ui)
 target_include_directories(tehi-core PUBLIC include src)
@@ -85,5 +93,5 @@ target_link_libraries(tehi-ui PRIVATE tehi-core)
 enable_testing()
 add_executable(tehi-test src/core/main.cpp)
 target_include_directories(tehi-test PRIVATE src)
-target_link_libraries(tehi-test PRIVATE te-engine tehi-campaign tehi-ui tehi-audio tehi-weapons tehi-world tehi-player)
+target_link_libraries(tehi-test PRIVATE te-engine tehi-campaign tehi-ui tehi-audio tehi-weapons tehi-world tehi-player nlohmann_json::nlohmann_json)
 add_test(NAME tehi-core COMMAND tehi-test)
