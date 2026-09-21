@@ -4,7 +4,7 @@ project(te-halo-inspired VERSION 0.1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_subdirectory(/home/sin/Projects/twilight-elysium ${CMAKE_BINARY_DIR}/twilight-elysium)
+add_subdirectory(/home/sin/Projects/games/twilight-elysium ${CMAKE_BINARY_DIR}/twilight-elysium)
 
 # Core game library
 add_library(tehi-core STATIC

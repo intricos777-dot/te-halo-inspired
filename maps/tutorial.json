@@ -1,7 +1,7 @@
 {
   "mission_id": "tutorial",
   "name": "First Light",
-  "description": "Protagonist awakening and basic movement/combat orientation.",
+  "description": "Cryo bay awakening aboard the frigate — the UNSC's last hope stirs to alarms, the sidearm waits, a drone marks the first target. Canon frame: the Fall of Reach, Installation 04, one Spartan and one AI against the Covenant.",
   "map": "tutorial.bsp",
   "spawn": {"x": 0.0, "y": 0.0, "z": 0.0},
   "objectives": [

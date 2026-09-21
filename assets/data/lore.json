@@ -1,0 +1,21 @@
+{
+  "canon_grounding": {
+    "source": "Halo (2001) — Bungie",
+    "themes": [
+      "a ringworld called Installation 04 — a weapon, and a revelation",
+      "UNSC against the Covenant: humanity's extinction is the theology",
+      "the Spartans were made, not born — MJOLNIR armor, flash-cloned bones, and the will to finish the fight",
+      "an AI named Cortana, the one constant in a war of apology"
+    ],
+    "vocabulary": {
+      "branches": ["UNSC Marines", "Special (SPARTAN lineage)", "Naval Intelligence", "ONI"],
+      "enemies": ["the Covenant", "the Flood — the parasite that turns soldiers into screams", "the Sentinels of the ring"],
+      "places": ["the Pillar of Autumn", "Cryo bay", "the ring's surface", "the Control Room", "the Library"]
+    }
+  },
+  "roster_grounding": {
+    "id": 0,
+    "callsign": "Living_Sin",
+    "note": "A SPARTAN-II-adjacent operative designate — augmentations and guilt. When the Covenant glass worlds, someone has to carry the firing solution."
+  }
+}
